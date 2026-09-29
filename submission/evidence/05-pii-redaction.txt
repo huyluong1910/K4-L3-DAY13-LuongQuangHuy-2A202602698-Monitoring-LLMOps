@@ -1,0 +1,86 @@
+=== PII REDACTION EVIDENCE IN data/logs.jsonl ===
+
+Sample 1 (Event: request_received, Correlation ID: req-cd8eded5):
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "What is your refund policy? My email is [REDACTED_EMAIL]"
+  },
+  "event": "request_received",
+  "session_id": "s01",
+  "user_id_hash": "2055254ee30a",
+  "correlation_id": "req-cd8eded5",
+  "env": "dev",
+  "feature": "qa",
+  "model": "claude-sonnet-4-5",
+  "level": "info",
+  "ts": "2026-09-29T07:49:32.292387Z"
+}
+
+Sample 2 (Event: request_received, Correlation ID: req-ed727586):
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Here is my phone [REDACTED_PHONE_VN], what should be logged?"
+  },
+  "event": "request_received",
+  "session_id": "s05",
+  "user_id_hash": "64f6ec689229",
+  "correlation_id": "req-ed727586",
+  "env": "dev",
+  "feature": "qa",
+  "model": "claude-sonnet-4-5",
+  "level": "info",
+  "ts": "2026-09-29T07:49:35.127036Z"
+}
+
+Sample 3 (Event: request_received, Correlation ID: req-7090447d):
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?"
+  },
+  "event": "request_received",
+  "session_id": "s09",
+  "user_id_hash": "4d14d5d4f719",
+  "correlation_id": "req-7090447d",
+  "env": "dev",
+  "feature": "qa",
+  "model": "claude-sonnet-4-5",
+  "level": "info",
+  "ts": "2026-09-29T07:49:36.865101Z"
+}
+
+Sample 4 (Event: request_received, Correlation ID: req-b588e886):
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "What is your refund policy? My email is [REDACTED_EMAIL]"
+  },
+  "event": "request_received",
+  "feature": "qa",
+  "correlation_id": "req-b588e886",
+  "env": "dev",
+  "session_id": "s01",
+  "model": "claude-sonnet-4-5",
+  "user_id_hash": "2055254ee30a",
+  "level": "info",
+  "ts": "2026-09-29T09:50:57.028562Z"
+}
+
+Sample 5 (Event: request_received, Correlation ID: req-20e88196):
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Here is my phone [REDACTED_PHONE_VN], what should be logged?"
+  },
+  "event": "request_received",
+  "feature": "qa",
+  "correlation_id": "req-20e88196",
+  "env": "dev",
+  "session_id": "s05",
+  "model": "claude-sonnet-4-5",
+  "user_id_hash": "64f6ec689229",
+  "level": "info",
+  "ts": "2026-09-29T09:51:02.601061Z"
+}

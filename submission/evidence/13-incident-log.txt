@@ -1,0 +1,214 @@
+=== INCIDENT LOGS EVIDENCE (Challenge: day13-k4-l3a-monitoring-llmops-v1 | Scenario: rag_slow) ===
+
+Affected correlation IDs: req-852ec6e8, req-ab23406b, req-54f7c474, req-8f4d8344, req-9250dc7a
+Affected feature: monitoring
+
+Event: request_received | ID: req-852ec6e8 | Latency: Nonems
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Which signal should be checked after latency increases?"
+  },
+  "event": "request_received",
+  "env": "dev",
+  "user_id_hash": "4570299f37e2",
+  "session_id": "k4-l3a-challenge-s04",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-852ec6e8",
+  "level": "info",
+  "ts": "2026-09-29T09:23:01.330964Z"
+}
+
+Event: response_sent | ID: req-852ec6e8 | Latency: 4183ms
+{
+  "service": "api",
+  "latency_ms": 4183,
+  "ttft_ms": 50,
+  "tokens_in": 36,
+  "tokens_out": 151,
+  "cost_usd": 0.002373,
+  "quality_score": 0.9,
+  "tool_name": "retrieval",
+  "tool_success": true,
+  "payload": {
+    "answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."
+  },
+  "event": "response_sent",
+  "env": "dev",
+  "user_id_hash": "4570299f37e2",
+  "session_id": "k4-l3a-challenge-s04",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-852ec6e8",
+  "level": "info",
+  "ts": "2026-09-29T09:23:07.386924Z"
+}
+
+Event: request_received | ID: req-ab23406b | Latency: Nonems
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Describe how to prove a slow span is the root cause."
+  },
+  "event": "request_received",
+  "env": "dev",
+  "user_id_hash": "ed72e61117f6",
+  "session_id": "k4-l3a-challenge-s05",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-ab23406b",
+  "level": "info",
+  "ts": "2026-09-29T09:23:07.390602Z"
+}
+
+Event: response_sent | ID: req-ab23406b | Latency: 3768ms
+{
+  "service": "api",
+  "latency_ms": 3768,
+  "ttft_ms": 50,
+  "tokens_in": 35,
+  "tokens_out": 123,
+  "cost_usd": 0.00195,
+  "quality_score": 0.8,
+  "tool_name": "retrieval",
+  "tool_success": true,
+  "payload": {
+    "answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."
+  },
+  "event": "response_sent",
+  "env": "dev",
+  "user_id_hash": "ed72e61117f6",
+  "session_id": "k4-l3a-challenge-s05",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-ab23406b",
+  "level": "info",
+  "ts": "2026-09-29T09:23:11.163382Z"
+}
+
+Event: request_received | ID: req-54f7c474 | Latency: Nonems
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Summarize the observability workflow for an AI API."
+  },
+  "event": "request_received",
+  "env": "dev",
+  "user_id_hash": "dc9b2ec8da9d",
+  "session_id": "k4-l3a-challenge-s03",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-54f7c474",
+  "level": "info",
+  "ts": "2026-09-29T09:23:11.170096Z"
+}
+
+Event: response_sent | ID: req-54f7c474 | Latency: 3455ms
+{
+  "service": "api",
+  "latency_ms": 3455,
+  "ttft_ms": 50,
+  "tokens_in": 35,
+  "tokens_out": 109,
+  "cost_usd": 0.00174,
+  "quality_score": 0.8,
+  "tool_name": "retrieval",
+  "tool_success": true,
+  "payload": {
+    "answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."
+  },
+  "event": "response_sent",
+  "env": "dev",
+  "user_id_hash": "dc9b2ec8da9d",
+  "session_id": "k4-l3a-challenge-s03",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-54f7c474",
+  "level": "info",
+  "ts": "2026-09-29T09:23:14.628986Z"
+}
+
+Event: request_received | ID: req-8f4d8344 | Latency: Nonems
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Explain why metrics traces and logs work together."
+  },
+  "event": "request_received",
+  "env": "dev",
+  "user_id_hash": "dde2e75b20cf",
+  "session_id": "k4-l3a-challenge-s01",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-8f4d8344",
+  "level": "info",
+  "ts": "2026-09-29T09:23:14.634014Z"
+}
+
+Event: response_sent | ID: req-8f4d8344 | Latency: 2968ms
+{
+  "service": "api",
+  "latency_ms": 2968,
+  "ttft_ms": 50,
+  "tokens_in": 35,
+  "tokens_out": 150,
+  "cost_usd": 0.002355,
+  "quality_score": 0.8,
+  "tool_name": "retrieval",
+  "tool_success": true,
+  "payload": {
+    "answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."
+  },
+  "event": "response_sent",
+  "env": "dev",
+  "user_id_hash": "dde2e75b20cf",
+  "session_id": "k4-l3a-challenge-s01",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-8f4d8344",
+  "level": "info",
+  "ts": "2026-09-29T09:23:17.606251Z"
+}
+
+Event: request_received | ID: req-9250dc7a | Latency: Nonems
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "How should an engineer investigate tail latency?"
+  },
+  "event": "request_received",
+  "env": "dev",
+  "user_id_hash": "aae0b94055a9",
+  "session_id": "k4-l3a-challenge-s02",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-9250dc7a",
+  "level": "info",
+  "ts": "2026-09-29T09:23:17.610226Z"
+}
+
+Event: response_sent | ID: req-9250dc7a | Latency: 3173ms
+{
+  "service": "api",
+  "latency_ms": 3173,
+  "ttft_ms": 50,
+  "tokens_in": 34,
+  "tokens_out": 146,
+  "cost_usd": 0.002292,
+  "quality_score": 0.9,
+  "tool_name": "retrieval",
+  "tool_success": true,
+  "payload": {
+    "answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."
+  },
+  "event": "response_sent",
+  "env": "dev",
+  "user_id_hash": "aae0b94055a9",
+  "session_id": "k4-l3a-challenge-s02",
+  "model": "claude-sonnet-4-5",
+  "feature": "monitoring",
+  "correlation_id": "req-9250dc7a",
+  "level": "info",
+  "ts": "2026-09-29T09:23:20.786766Z"
+}

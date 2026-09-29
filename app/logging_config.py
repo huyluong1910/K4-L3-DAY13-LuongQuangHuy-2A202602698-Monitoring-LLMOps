@@ -24,13 +24,17 @@ class JsonlFileProcessor:
 
 
 def scrub_event(_: Any, __: str, event_dict: dict[str, Any]) -> dict[str, Any]:
-    payload = event_dict.get("payload")
-    if isinstance(payload, dict):
-        event_dict["payload"] = {
-            k: scrub_text(v) if isinstance(v, str) else v for k, v in payload.items()
-        }
-    if "event" in event_dict and isinstance(event_dict["event"], str):
-        event_dict["event"] = scrub_text(event_dict["event"])
+    def _scrub(val: Any) -> Any:
+        if isinstance(val, str):
+            return scrub_text(val)
+        if isinstance(val, dict):
+            return {k: _scrub(v) for k, v in val.items()}
+        if isinstance(val, list):
+            return [_scrub(v) for v in val]
+        return val
+
+    for key, value in list(event_dict.items()):
+        event_dict[key] = _scrub(value)
     return event_dict
 
 
@@ -42,8 +46,7 @@ def configure_logging() -> None:
             merge_contextvars,
             structlog.processors.add_log_level,
             structlog.processors.TimeStamper(fmt="iso", utc=True, key="ts"),
-            # TODO: Register your PII scrubbing processor here
-            # scrub_event,
+            scrub_event,
             structlog.processors.StackInfoRenderer(),
             structlog.processors.format_exc_info,
             JsonlFileProcessor(),

@@ -7,7 +7,7 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: Dựa trên baseline P95 latency ~899ms và TTFT 50ms, ngưỡng latency 3000ms (~3.3x P95) được chọn để bảo đảm 99.5% request phản hồi mượt mà cho người dùng, error budget 0.5% tương ứng tối đa 5 request lỗi/chậm trên mỗi 1000 request trong chu kỳ 28 ngày.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5
